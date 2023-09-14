@@ -1,0 +1,143 @@
+/* ::: AJUSTES GENERALES ::: */
+:root{
+    --color-primario: #0a3143;
+    --text-primario: 'Poppins', sans-serif;
+    --text-secundario: 'Open Sans', sans-serif;
+}
+*,p{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins',sans-serif;
+}
+h1,h2{
+    font-family: var(--text-secundario);
+    font-weight: bold;
+}
+h1{
+    font-size: 40px;
+    margin: 5rem 0 3rem;
+}
+.subtitulo{
+    margin: 20px 0 30px 0;
+    font-size: 25px;
+}
+
+img{
+    width: 100%;
+}
+.display-not{
+    display: none;
+}
+.contenedor{
+    max-width: 1200px;
+}
+
+/* CONSULTA*/
+
+/*FILTROS*/
+.form__filtros{
+    width: 1200px;
+    display: flex;
+    margin-bottom: 3rem;
+}
+.lista__filtro{
+    background-color: rgb(240, 240, 240);
+    padding: 10px;
+    border-radius: 10px;
+    font-weight: 500;
+    position: relative;
+    z-index: 2;
+}
+.lista__filtro{
+    margin-right: 2rem;
+}
+.lista__input i{
+    margin-left: 4rem;
+}
+
+.lista__input{
+    cursor: pointer;
+}
+
+
+
+.lista__funcion{
+    width: 280px;
+    border: 1px solid rgb(240, 240, 240);
+    border-radius: 10px;
+    position: absolute;
+    left: 0;
+    transform: translateY(0px);
+    background-color: rgb(255, 255, 255);
+    padding: 20px;
+    box-shadow: 0px 3px 10px gray;
+    opacity: 0;
+    transition: all 0.4s ease;
+    pointer-events: none;
+}
+
+.lista__filtro.open .lista__funcion{
+    transform: translateY(20px);
+    opacity: 1;
+    pointer-events: auto;
+}
+
+.lista__funcion .funcion__input{
+    background: inherit;
+    border: none;
+    border-bottom: 1px solid gray;
+    width: 100%;
+    outline: none;
+}
+.lista__funcion .check{
+    margin-right: 1.8rem;
+}
+.funcion-input__contenedor:first-child{
+    margin-bottom: 1.5rem;
+}
+
+.funcion__botones{
+    margin-top: 20px;
+    display: flex;
+    justify-content: space-between;
+}
+.boton-limpiar{
+    border: none;
+    background: none;
+    font-size: 13px;
+}
+.boton-enviar{
+    background: none;
+    padding: 5px 10px;
+    border-radius: 10px;
+    border: 1px solid white;
+    color: white;
+    background-color: #2088b8;
+}
+
+/* TABLA */
+main{
+    padding-left: 70px;
+    margin-left: 300px;
+    transition: margin 0.5s ease ;
+}
+main.expand{
+    margin-left: 78px;
+}
+.button-contenedor{
+    margin: 0 0 16px;
+    padding: 0 15px;
+    display: flex;
+    gap: 10px;
+    align-items: center;
+    position: absolute;
+    right: 0;
+    bottom: 0;
+}
+.row{
+    position: relative;
+}
+label i{
+    margin-right: 10px;
+}

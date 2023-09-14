@@ -1,0 +1,94 @@
+/* ::: VALORES GLOBALES :::*/
+
+:root{
+    --fuentePrincipal: 'Open Sans', sans-serif;
+    --fuenteSecundaria: 'Poppins', sans-serif;
+}
+
+html{
+    box-sizing: border-box;
+    font-family: var(--fuentePrincipal);
+    font-size: 62.5%;
+}
+*,*::before,*::after{
+    box-sizing: inherit;
+}
+body{
+    font-family: var(--fuentePrincipal);
+    font-size: 1.6rem;
+}
+img{
+    max-width: 100%;
+}
+.card{
+    border: none;
+}
+
+/* ::: CARD :::*/
+
+.card__box{
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* ::: HEADER ::: */
+
+.card__img{
+    margin: 0 auto;
+    max-width: 150px;
+}
+.card__header h2{
+    margin-top: 25px;
+    text-align: center;
+    font-size: 30px;
+    font-weight: bold;
+    color: #0f6875;
+}
+
+/*::: FORMULARIO:::*/
+.card__form{
+    background-color: rgb(245, 245, 245);
+    border-radius: 10px;
+    padding: 30px 20px;
+    margin-top: 50px;
+    width: 450px;
+}
+.form-group,
+.btn-principal{
+    margin-top: 2rem;
+}
+.form-group:first-child{
+    margin: 0;
+}
+.form-ico{
+    margin-right: 12px;
+}
+.form-label{
+    font-size: 1.6rem;
+    margin-bottom: 1.5rem;
+}
+.form-input{
+    position: relative;
+}
+.form-input button{
+    position: absolute;
+    right: 0;
+    top: 0;
+    height: 100%;
+    width: 40px;
+    border-left: 1px solid rgb(221, 221, 221);
+    font-size: 1.8rem;
+}
+.form-control{
+    font-size: 1.8rem;
+}
+.btn-principal{
+    width: 100%;
+    border: none;
+    border-radius: 5px;
+    padding: 1rem 0;
+    font-size: 1.8rem;
+}

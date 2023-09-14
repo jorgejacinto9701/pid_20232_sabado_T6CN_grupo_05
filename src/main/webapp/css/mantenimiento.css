@@ -1,0 +1,63 @@
+/* ::: AJUSTES GENERALES ::: */
+:root{
+    --color-primario: #0a3143;
+    --text-primario: 'Poppins', sans-serif;
+    --text-secundario: 'Open Sans', sans-serif;
+}
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins',sans-serif;
+}
+h1,h2{
+    font-family: var(--text-secundario);
+    font-weight: bold;
+}
+h1{
+    font-size: 30px;
+    margin: 40px 0;
+}
+.subtitulo{
+    margin: 20px 0 30px 0;
+    font-size: 25px;
+}
+
+img{
+    width: 100%;
+}
+.display-not{
+    display: none;
+}
+.contenedor{
+    max-width: 1200px;
+}
+
+/* MANTENIMIENTO*/
+main{
+    padding-left: 70px;
+    margin-left: 300px;
+    transition: margin 0.5s ease ;
+}
+main.expand{
+    margin-left: 78px;
+}
+.button-contenedor{
+    margin: 0 0 16px;
+    padding: 0 15px;
+    display: flex;
+    gap: 10px;
+    align-items: center;
+    position: absolute;
+    right: 0;
+    bottom: 0;
+}
+.row{
+    position: relative;
+}
+label i{
+    margin-right: 10px;
+}
+.bg-dark-blue{
+	background-color: #0a3143;
+}

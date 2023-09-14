@@ -1,0 +1,150 @@
+/*AJUSTES GENERALES*/
+
+:root{
+    --fuentePrincipal: 'Open Sans', sans-serif;
+    --fuenteSecundaria: 'Poppins', sans-serif;
+    --colorPrincipal: #17a2b8;
+}
+*,*.after,*.before{
+    box-sizing: border-box;
+}
+html{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-size: 62.5%;
+}
+body{
+    font-size: 1.8rem;
+    background-image: url('img/fondo.jpg'); /* Ruta a tu imagen */
+    background-size: cover; /* Ajusta la imagen para cubrir todo el fondo */
+    background-repeat: no-repeat; /* Evita que la imagen se repita */
+    background-attachment: fixed; /* Fija la imagen de fondo al desplazarse */
+    /* Otros estilos para el contenido de tu página */
+
+}
+a{
+    text-decoration: none;
+    color: black;
+    background-color: rgb(240, 240, 240);
+}
+.btn-sesion{
+    cursor: pointer;
+    display: block;
+    width: 100%;
+    border: none;
+    text-align: center;
+    padding: 1.5rem 0px;
+    font-weight: bold;
+    font-size: 1.8rem;
+    border-radius: 10px;
+}
+label{
+    cursor:text;
+}
+.container{
+    width: 80%;
+    margin: auto;
+    height: 80%;
+    display: grid;
+    grid-template-rows: 1fr 2fr;
+}
+img{
+    width: 100%;
+}
+
+/*SECTION: SESION*/
+.sesion-container{
+    display: flex;
+    height: 100vh;
+    width: 100%;
+    background-image: url("../img/fondo.jpg");
+    background-size: cover;
+    background-position: center bottom;
+}
+
+/*SECTION: TEXT*/
+.sesion-text{
+    border-radius: 0px 20px 20px 0px;
+    flex-basis: 25%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: var(--fuentePrincipal);
+    font-size: 18px;
+    background-color: rgba(255, 255, 255, 0.89);
+}
+.logo-container{
+    max-width: 30rem;
+    margin: 0 auto 5rem;
+}
+
+/*SECTION: FORMULARIO*/
+.form{
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+.form-group{
+    position: relative;
+}
+.form-group:nth-child(2){
+    margin-top: 5rem;
+}
+.form-group .btn{
+    position: absolute;
+    right: 0;
+    width: 50px;
+    font-size: 17px;
+    color: #706c6c;
+}
+.form__input{
+    width: 100%;
+    background-color: inherit;
+    color: #706c6c;
+    font-size: 1.8rem;
+    padding: .6rem .3rem;
+    border: none;
+    outline: none;
+    border-bottom: 1px solid #706c6c;
+}
+.icons{
+    font-size: 2.3rem;
+}
+.form__label{
+    margin-left: 1rem;
+    cursor: text;
+}
+.form__label--container,
+.form__input:placeholder-shown + .form__label--container{
+    color: #706c6c;
+    position: absolute;
+    top: 0;
+    left: 5px;
+    transform: translateY(5px);
+    transition: transform .5s, color .3s;
+}
+.form__input:focus + .form__label--container,
+.form__input:not(placeholder-shown) + .form__label--container{
+    transform: translateY(-30px) scale(.8);
+    transform-origin: left top;
+    color: black;
+}
+
+
+.btn-sesion:first-child{
+    background-color: var(--colorPrincipal);
+    color: white;
+    margin-bottom: 2rem;
+}
+.text--recuperar{
+    margin-top: 3rem;
+    font-size: 1.6rem;
+    text-align: justify;
+}
+.link--recuperar{
+    background-color: inherit;
+    font-weight: bold;
+    margin-left: 10px;
+}
