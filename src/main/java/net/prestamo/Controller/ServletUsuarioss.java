@@ -21,12 +21,10 @@ public class ServletUsuarioss extends HttpServlet {
 	
     public ServletUsuarioss() {
         super();
-        // TODO Auto-generated constructor stub
+       
     }
 
-	/**
-	 * @see HttpServlet#service(HttpServletRequest request, HttpServletResponse response)
-	 */
+
 	protected void service(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		
 		//recuperar p�rametro "accion" que viene de la p�gina docente.jsp para saber que acci�n se va a realizar
