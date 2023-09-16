@@ -21,7 +21,7 @@ public class ServletLoginUsuarios extends HttpServlet {
        
     }
 
-    //ser
+    //serv
 	protected void service(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		MYQLLoginUsuarioDAO dao = new MYQLLoginUsuarioDAO();
 		Usuarios u = new Usuarios();
