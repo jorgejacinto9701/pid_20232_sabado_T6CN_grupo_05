@@ -48,6 +48,7 @@
             <li><a class="dropdown-item" href="Usuario.jsp">Mantenimiento Usuario</a></li>
             <li><a class="dropdown-item" href="Planilla.jsp">Generar planilla</a></li>
             <li><a class="dropdown-item" href="Asistencia.jsp">Registrar Asistencia</a></li>
+            <li><a class="dropdown-item" href="RegistraSolicitud.jsp">Registro Solicitud</a></li>
           </ul>
         </li>
         
