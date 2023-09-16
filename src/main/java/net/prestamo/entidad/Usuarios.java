@@ -9,14 +9,6 @@ public class Usuarios {
 	private String apellido,email,telefono;
 	private Date FechaRegistro;
 	private String Estado;
-	
-	
-	public String getEstado() {
-		return Estado;
-	}
-	public void setEstado(String estado) {
-		Estado = estado;
-	}
 	public int getIdUsuario() {
 		return IdUsuario;
 	}
@@ -59,9 +51,15 @@ public class Usuarios {
 	public void setFechaRegistro(Date fechaRegistro) {
 		FechaRegistro = fechaRegistro;
 	}
+	public String getEstado() {
+		return Estado;
+	}
+	public void setEstado(String estado) {
+		Estado = estado;
+	}
 	
 	
-	//
+
 	
 	
 
