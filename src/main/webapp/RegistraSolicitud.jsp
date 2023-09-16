@@ -19,65 +19,7 @@
 <title>Registra Solicitud de Prestamos</title>
 </head>
 <body>
-<nav class="navbar navbar-expand-lg navbar-light bg-light">
-		<div class="container-fluid">
-			<a class="navbar-brand" href="#">Inicio</a>
-			<button class="navbar-toggler" type="button"
-				data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
-				aria-controls="navbarSupportedContent" aria-expanded="false"
-				aria-label="Toggle navigation">
-				<span class="navbar-toggler-icon"></span>
-			</button>
-			<div class="collapse navbar-collapse" id="navbarSupportedContent">
-				<ul class="navbar-nav me-auto mb-2 mb-lg-0">
-					<li class="nav-item dropdown"><a
-						class="nav-link dropdown-toggle" href="#" id="navbarDropdown"
-						role="button" data-bs-toggle="dropdown" aria-expanded="false">
-							Mantenimiento </a>
-						<ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-							<li><a class="dropdown-item" href="Usuario.jsp">Mantenimiento
-									Usuario</a></li>
-									<li><a class="dropdown-item" href="Cuota.jsp">Mantenimiento
-									cuotas </a></li>	
-							<li><a class="dropdown-item" href="Planilla.jsp">Generar
-									planilla</a></li>
-							<li><a class="dropdown-item" href="#">Registrar
-									Asistencia</a></li>
-							<li><a class="dropdown-item" href="RegistraSolicitud.jsp">Registro Solicitud</a></li>
-						</ul></li>
 
-					<li class="nav-item dropdown"><a
-						class="nav-link dropdown-toggle" href="#" id="navbarDropdown"
-						role="button" data-bs-toggle="dropdown" aria-expanded="false">
-							Transaccion </a>
-						<ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-							<li><a class="dropdown-item" href="OrdenPago.jsp">Generar
-									Orden de Pago</a></li>
-
-						</ul>
-						
-						<li class="nav-item dropdown">
-          <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-            Consultas
-          </a>
-          <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-            <li><a class="dropdown-item" href="BuscaAsistencia.jsp">Buscar Asistencia</a></li> 
-            <li><a class="dropdown-item" href="#">Consulta02</a></li> 
-      	  </ul>
-      	</li>
-      
-      	<li class="nav-item dropdown">
-          <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-            Reportes
-          </a>
-          <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-            <li><a class="dropdown-item" href="#">Reporte 01</a></li> 
-            <li><a class="dropdown-item" href="#">Reporte 02</a></li> 
-      	  </ul>
-      	</li>
-			</div>
-		</div>
-	</nav>
 
 <jsp:include page="Menu.jsp" />
 <div class="container" style="margin-top: 4%">
