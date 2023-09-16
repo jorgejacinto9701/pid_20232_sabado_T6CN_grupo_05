@@ -8,7 +8,7 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
-import com.mysql.cj.x.protobuf.MysqlxDatatypes.Scalar.String;
+//
 
 import net.prestamo.DAO.MYQLLoginUsuarioDAO;
 import net.prestamo.entidad.Usuarios;
