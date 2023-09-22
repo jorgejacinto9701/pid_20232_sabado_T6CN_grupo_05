@@ -1,7 +1,7 @@
 <%@ taglib uri="http://java.sun.com/jstl/core_rt" prefix="c" %>
 <!DOCTYPE html>
 <html lang="esS" >
-
+<jsp:include page="Menu.jsp" />
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
@@ -21,7 +21,7 @@
 <body>
 
 
-<jsp:include page="Menu.jsp" />
+
 <div class="container" style="margin-top: 4%">
 <h2 class="text-center">Registra Solicitud de Prestamos</h2>
 
@@ -203,27 +203,25 @@ $(document).ready(function() {
 	    }
 	});
 
-	$.getJSON("cargaPais", {}, function (data){
+	$.getJSON("cargaUsuario", {}, function (data){
 		$.each(data, function(index, item){
-			$("#id_pais").append("<option value=" +  item.idPais +" >" +  item.nombre+ "</option>");
+			$("#id_usuario").append("<option value=" +  item.IdUsuario +" >" +  item.nombre+ "</option>");
 		});	
 	});		
 
 	
 	function limpiarFormulario(){	
-		$('#id_razon').val('');
-		$('#id_celular').val('');
-		$('#id_pais').val(' ');
-		$('#id_direccion').val(' ');
-		$('#id_contacto').val(' ');
-		$('#id_ruc').val(' ');
+		$('#id_monto').val('');
+		$('#id_fechaIni').val('');
+		$('#id_fechaFin').val(' ');
+		$('#id_prestatario').val(' ');
+		
 	}
 </script>
 
 
 
-	
-</div>
+
 </body>
 </html>
 
