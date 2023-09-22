@@ -2,6 +2,7 @@ package net.prestamo.DAO;
 
 import java.sql.Connection;
 import java.sql.PreparedStatement;
+import java.util.List;
 import java.util.logging.Logger;
 
 import net.prestamo.entidad.Solicitud;
@@ -46,5 +47,29 @@ private static Logger log = Logger.getLogger(SolicitudModel.class.getName());
 		}
 		
 		return salida;
+	}
+
+	@Override
+	public int save(Solicitud bean) {
+		// TODO Auto-generated method stub
+		return 0;
+	}
+
+	@Override
+	public int update(Solicitud bean) {
+		// TODO Auto-generated method stub
+		return 0;
+	}
+
+	@Override
+	public int delete(int cod) {
+		// TODO Auto-generated method stub
+		return 0;
+	}
+
+	@Override
+	public List<Solicitud> listAll() {
+		// TODO Auto-generated method stub
+		return null;
 	}
 }
