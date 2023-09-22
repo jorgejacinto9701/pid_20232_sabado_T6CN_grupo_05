@@ -125,38 +125,41 @@
 							id="frmUsuario">
 							<div class="form-group">
 								<label for="codigo">Código</label> <input type="text" class="form-control"
-									name="codigoUsuario" readonly value="0" id="id-codigo">
+									name="IdUsuario" readonly value="0" id="id-codigo">
 							</div>
 							<div class="form-group">
 								<label for="usuario">Nombre</label> <input type="text" name="nombre"
 									class="form-control" id="id-nombre">
 							</div>
 							<div class="form-group">
-								<label for="usuario">Apellido</label> <input type="text" name="usuario"
+								<label for="usuario">Apellido</label> <input type="text" name="apellido"
 									class="form-control" id="id-usuario">
 							</div>
 							<div class="form-group">
-								<label for="usuario">Email</label> <input type="text" name="usuario"
+								<label for="usuario">Email</label> <input type="text" name="email"
 									class="form-control" id="id-usuario">
 							</div>
 							<div class="form-group">
-								<label for="usuario">Contraseña</label> <input type="text" name="usuario"
+								<label  for="usuario">Contraseña</label> <input type="text" name="contraseña"
 									class="form-control" id="id-usuario">
 							</div>
 							<div class="form-group">
-								<label for="usuario">Telefono</label> <input type="text" name="usuario"
+								<label  for="usuario">Telefono</label> <input type="text" name="telefono"
 									class="form-control" id="id-usuario">
 							</div>
 						
 
-							<div class="form-group">
-								<label for="tipo" class="form-label">Estado de cuenta</label>
-								<select class="form-select form-control" name="codigoPersonal"
-									id="id-personal">
-									<option value="" selected>[Seleccione su tipo de empleado]</option>
 
-								</select>
-							</div>
+							
+							 <div class="form-group">	
+                                    <label for="exampleInputEmail1" class="text-center"><i class="fa-solid fa-check"></i><b>Estado</b></label><br>
+                                    <select class="form-control" id="idEstado" name="Estado">
+                                        <option value=" ">[Seleccione Estado]</option>
+                                        <option value="Activo">Activo</option>
+                                        <option value="Inactivo">Inactivo</option>
+                                    </select>
+                                </div>
+							
 							<div class="modal-footer">
 								<button type="submit" class="btn btn-primary">Grabar</button>
 								<button type="button" class="btn btn-secondary"
@@ -335,28 +338,57 @@
 		 	        		 			}
 		 	        		 		}
 		        		 },
-		        		 costo:{
+		        		 apellido:{
 		        			 validators:{
 		        				 notEmpty:{
 		        					 message:'Campo costo es obligatorio'
 		        				 },
 		        				 regexp:{
-		      		 				regexp:/^[0-9]{1,5}$/,
-		      		 				message:'Campo costo solo numeros MIN:5000 MAX:25000'
+		      		 				regexp:/^[a-zA-Z\s\ñ\Ñ\á\é\í\ó\ú\Á\É\Í\Ó\Ú]{5,50}$/,
+		      		 				message:'Campo nombre solo letras MIN:5 MAX:50'
 		      		 			}
 		        			 }
 		        		 },
-		        		 numero:{
+		        		 email:{
 		        			 validators:{
 		        				 notEmpty:{
 		        					 message:'Campo numero es obligatorio'
 		        				 },
 		        				 regexp:{
-		       		 				regexp:/^([2-6]||[1][0-0])$/,
-		       		 				message:'Campo numero solo numeros MIN:2 MAX:6'
+		       		 				regexp:/[^@\t\r\n]+@gmail\.com/,
+		       		 				message:'Campo correo es @gmail.com'
 		       		 			}
 		        			 }
 		        		 },  
+		        		 contraseña:{
+		        			 validators:{
+		        				 notEmpty:{
+		        					 message:'Campo contraseña es obligatorio para registrarse'
+		        				 },
+		        				 regexp:{
+		       		 				regexp: /^(?=.*[A-Za-z])(?=.*\d)[A-Za-z\d]{8,}$/,
+		       		 				message:'La contraseña debe tener al menos 8 caracteres, incluyendo al menos una letra y un número'
+		       		 			}
+		        			 }
+		        		 },  
+		        		 telefono:{
+		        			 validators:{
+		        				 notEmpty:{
+		        					 message:'Campo contraseña es obligatorio para registrarse'
+		        				 },
+		        				 regexp:{
+		        					 regexp: /^[0-9]{9}$/,
+								message: 'Campo numero solo acepta numeros max de 9 digitos'
+		       		 			}
+		        			 }
+		        		 },  
+		        		 Estado: {
+								validators: {
+									notEmpty: {
+										message: 'Seleccione Estado'
+									}
+								}
+							},
 		        	 }
 		        });   
 					
@@ -364,9 +396,6 @@
 	</script>
 </body>
 </html>
-
-
-
 
 
 
