@@ -70,8 +70,9 @@
             <li><a class="dropdown-item" href="Usuario.jsp">Mantenimiento Usuario</a></li>
             <li><a class="dropdown-item" href="Planilla.jsp">Generar planilla</a></li>
             <li><a class="dropdown-item" href="#">Registrar Asistencia</a></li>
-                   <li><a class="dropdown-item" href="Cuota.jsp">Registrar Cuota</a></li>
-                   <li><a class="dropdown-item" href="RegistraSolicitud.jsp">Registro Solicitud</a></li>
+            <li><a class="dropdown-item" href="Cuota.jsp">Registrar Cuota</a></li>
+            <li><a class="dropdown-item" href="RegistraSolicitud.jsp">Registro Solicitud</a></li>
+            <li><a class="dropdown-item" href="Prestamistas.jsp">Registrar Prestamistas</a></li>
           </ul>
         </li>
         

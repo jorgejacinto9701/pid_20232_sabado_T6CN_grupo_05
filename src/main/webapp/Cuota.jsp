@@ -57,7 +57,8 @@
 									planilla</a></li>
 							<li><a class="dropdown-item" href="#">Registrar
 									Asistencia</a></li>
-									<li><a class="dropdown-item" href="RegistraSolicitud.jsp">Registro Solicitud</a></li>
+							<li><a class="dropdown-item" href="RegistraSolicitud.jsp">Registro Solicitud</a></li>
+							<li><a class="dropdown-item" href="Prestamistas.jsp">Registrar Prestamistas</a></li>
 						</ul></li>
 
 					<li class="nav-item dropdown"><a
