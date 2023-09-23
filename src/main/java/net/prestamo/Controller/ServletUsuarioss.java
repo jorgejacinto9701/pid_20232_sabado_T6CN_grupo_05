@@ -60,10 +60,63 @@ public class ServletUsuarioss extends HttpServlet {
 		
 	}
 
-	private void grabarUsuario(HttpServletRequest request, HttpServletResponse response) {
-		// TODO Auto-generated method stub
+	private void grabarUsuario(HttpServletRequest request, HttpServletResponse response) throws IOException {
+		//variables
+		String cod,nom,ape,ema,contra,tele,estado,msj;
+		//leer los controles del formulario(cajas,select)
+		cod=request.getParameter("IdUsuario");
+		nom=request.getParameter("nombre");
+		ape=request.getParameter("apellido");
+		ema=request.getParameter("email");
+		contra=request.getParameter("contraseña");
+		tele=request.getParameter("telefono");
+
+		estado=request.getParameter("Estado");
+	
+		//crear objeto de la clase Docente
+		Usuarios bean=new Usuarios();
+		//setear los atributos del objeto "bean" con las variables
+		bean.setIdUsuario(Integer.parseInt(cod));
+		bean.setNombre(nom);
+		bean.setApellido(ape);
+		bean.setEmail(ema);
+		bean.setContraseña(contra);
+		bean.setTelefono(tele);
+		bean.setEstado(estado);
+		
+		//validar c�digo
+		if(Integer.parseInt(cod)==0) {
+			//invocar al m�todo save
+			int salida;
+			salida= usuarioservice.save(bean);
+			//validar "estado"		
+			if(salida>0)
+				//crear atributo
+				msj="El usuario se ha registrado correctamente";
+			else
+				//crear atributo
+				msj="Hubo un error en el registro del usuario";}
+			
+			else {
+				//invocar al m�todo update
+				int salida;
+				salida=usuarioservice.update(bean);
+				//validar "estado"		
+				if(salida>0)
+					//crear atributo
+					msj="Usuario actualizado correctamente";
+				else
+					//crear atributo
+					//request.setAttribute("MENSAJE", "Error en la actualizaci�n");
+					msj="Error en la actualizaci�n";
+			}
+			//invocar
+			
+			response.sendRedirect("Usuario.jsp?MENSAJE="+msj);
+		
 		
 	
+
 	}
 
 }
