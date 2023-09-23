@@ -15,8 +15,38 @@ public class MySqlUsuariosDAO implements UsuariosDAO {
 
 	@Override
 	public int save(Usuarios bean) {
-		// TODO Auto-generated method stub
-		return 0;
+		int salida=-1;
+		Connection cn=null;
+		PreparedStatement pstm=null;
+		try {
+			cn=MySqlConexion.getConexion();
+			//2
+			String sql="insert into tb_usuarios values(null,?,?,?,?,?,curtime(),?)";
+			//3
+			pstm=cn.prepareStatement(sql);
+			//4
+			pstm.setString(1, bean.getNombre());
+			pstm.setString(2, bean.getApellido());
+			pstm.setString(3, bean.getEmail());
+			pstm.setString(4, bean.getContraseña());
+			pstm.setString(5, bean.getTelefono());
+
+			pstm.setString(6, bean.getEstado());
+			//5
+			salida=pstm.executeUpdate();
+		} catch (SQLException e) {
+			e.printStackTrace();
+		}catch (Exception e) {
+			e.printStackTrace();
+		}finally {
+			try {
+				if(pstm!=null) pstm.close();
+				if(cn!=null) cn.close();
+			} catch (Exception e2) {
+				e2.printStackTrace();
+			}
+		}
+		return salida;
 	}
 
 	@Override

@@ -13,7 +13,7 @@
 	crossorigin="anonymous">
 <link href="css/dataTables.bootstrap5.min.css" rel="stylesheet">
 <link href="datepicker/bootstrap-datepicker.css" rel="stylesheet">
- <link rel="stylesheet" href="tu-archivo-css.css">
+ 
 
 
 	<style>

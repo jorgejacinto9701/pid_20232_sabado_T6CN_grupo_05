@@ -107,8 +107,7 @@
 		</c:if>
 
 		<h1>Registrar Usuarios</h1>
-
-		<button type="button" class="btn btn-primary" data-bs-toggle="modal"
+	<button type="button" class="btn btn-primary" data-bs-toggle="modal"
 			data-bs-target="#ModalUsuario">Nuevo Usuario</button>
 		<div class="modal fade" id="ModalUsuario" data-bs-backdrop="static"
 			data-bs-keyboard="false" tabindex="-1"
@@ -323,7 +322,7 @@
 				})
 	</script>
 	
-		<script>
+	<script>
 		 $(document).ready(function(){     
 		        $('#frmUsuario').bootstrapValidator({      
 		        	 fields:{
