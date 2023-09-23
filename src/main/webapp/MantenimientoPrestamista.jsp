@@ -5,7 +5,7 @@
 <html>
 <head>
 <meta charset="ISO-8859-1">
-<title>REGISTRAR USUARIO</title>
+<title>Registrar Prestamistas</title>
 <!-- Bootstrap CSS -->
 <link href="css/bootstrap.min.css" rel="stylesheet">
 <link href="css/dataTables.bootstrap5.min.css" rel="stylesheet">
@@ -35,7 +35,7 @@
 
 	<nav class="navbar navbar-expand-lg navbar-light bg-light">
 		<div class="container-fluid">
-			<a class="navbar-brand" href="#">Inicio</a>
+			<a class="navbar-brand" href="Menu.jsp">Inicio</a>
 			<button class="navbar-toggler" type="button"
 				data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
 				aria-controls="navbarSupportedContent" aria-expanded="false"
@@ -51,14 +51,15 @@
 						<ul class="dropdown-menu" aria-labelledby="navbarDropdown">
 							<li><a class="dropdown-item" href="Usuario.jsp">Mantenimiento
 									Usuario</a></li>
-									<li><a class="dropdown-item" href="Cuota.jsp">Mantenimiento
-									cuotas </a></li>	
+							<li><a class="dropdown-item" href="Cuota.jsp">Mantenimiento
+									de cuota</a></li>		
 							<li><a class="dropdown-item" href="Planilla.jsp">Generar
 									planilla</a></li>
 							<li><a class="dropdown-item" href="#">Registrar
 									Asistencia</a></li>
 							<li><a class="dropdown-item" href="RegistraSolicitud.jsp">Registro Solicitud</a></li>
 							<li><a class="dropdown-item" href="Prestamistas.jsp">Registrar Prestamistas</a></li>
+							<li><a class="dropdown-item" href="MantemientoPrestamista.jsp">Mantenimiento Prestamista</a></li>
 						</ul></li>
 
 					<li class="nav-item dropdown"><a
@@ -106,59 +107,52 @@
 			</div>
 		</c:if>
 
-		<h1>Registrar Usuarios</h1>
-	<button type="button" class="btn btn-primary" data-bs-toggle="modal"
-			data-bs-target="#ModalUsuario">Nuevo Usuario</button>
-		<div class="modal fade" id="ModalUsuario" data-bs-backdrop="static"
+		<h1 style="text-align: center;font-family: inherit;">Mantemiento Prestamistas</h1>
+
+		<button type="button" class="btn btn-primary" data-bs-toggle="modal"
+			data-bs-target="#ModalPrestamista">Nuevo Prestamista</button>
+		<div class="modal fade" id="ModalPrestamista" data-bs-backdrop="static"
 			data-bs-keyboard="false" tabindex="-1"
 			aria-labelledby="staticBackdropLabel" aria-hidden="true">
 			<div class="modal-dialog modal-dialog-centered">
 				<div class="modal-content">
 					<div class="modal-header">
-						<h5 class="modal-title" id="staticBackdropLabel">USUARIO</h5>
+						<h5 class="modal-title" id="staticBackdropLabel">PRESTAMISTA</h5>
 						<button type="button" class="btn-close" data-bs-dismiss="modal"
 							aria-label="Close"></button>
 					</div>
 					<div class="modal-body">
-						<form action="ServletUsuarioss?accion=GRABAR" method="post"
-							id="frmUsuario">
+						<form action="ServletPrestamista?accion=GRABAR" method="post"
+							id="frmPrestamista">
 							<div class="form-group">
 								<label for="codigo">Código</label> <input type="text" class="form-control"
-									name="IdUsuario" readonly value="0" id="id-codigo">
+									name="codigo" readonly value="0" id="id-codigo">
 							</div>
 							<div class="form-group">
-								<label for="usuario">Nombre</label> <input type="text" name="nombre"
-									class="form-control" id="id-nombre">
+								<label for="nombre">Nombre</label> <input type="text" name="nombre"
+									class="form-control" id="idNombre">
 							</div>
 							<div class="form-group">
-								<label for="usuario">Apellido</label> <input type="text" name="apellido"
-									class="form-control" id="id-usuario">
+								<label for="apellido">Apellido</label> <input type="text" name="apellido"
+									class="form-control" id="idApellido">
 							</div>
 							<div class="form-group">
-								<label for="usuario">Email</label> <input type="text" name="email"
-									class="form-control" id="id-usuario">
+								<label for="direccion">Dirección</label> <input type="text" name="direccion"
+									class="form-control" id="idDireccion">
 							</div>
 							<div class="form-group">
-								<label  for="usuario">Contraseña</label> <input type="text" name="contraseña"
-									class="form-control" id="id-usuario">
+								<label for="correo">Correo Electrónico</label> <input type="text" name="correo"
+									class="form-control" id="idCorreo">
 							</div>
 							<div class="form-group">
-								<label  for="usuario">Telefono</label> <input type="text" name="telefono"
-									class="form-control" id="id-usuario">
+								<label for="dni">DNI</label> <input type="text" name="dni"
+									class="form-control" id="idDNI">
 							</div>
-						
+							<div class="form-group">
+								<label for="telefono">Teléfono</label> <input type="text" name="telefono"
+									class="form-control" id="idTelefono">
+							</div>
 
-
-							
-							 <div class="form-group">	
-                                    <label for="exampleInputEmail1" class="text-center"><i class="fa-solid fa-check"></i><b>Estado</b></label><br>
-                                    <select class="form-control" id="idEstado" name="Estado">
-                                        <option value=" ">[Seleccione Estado]</option>
-                                        <option value="Activo">Activo</option>
-                                        <option value="Inactivo">Inactivo</option>
-                                    </select>
-                                </div>
-							
 							<div class="modal-footer">
 								<button type="submit" class="btn btn-primary">Grabar</button>
 								<button type="button" class="btn btn-secondary"
@@ -170,49 +164,18 @@
 			</div>
 		</div>
 
-
-		<!-- Modal PARA ELIMINAR-->
-		<div class="modal fade" id="modalEliminar" data-bs-backdrop="static"
-			data-bs-keyboard="false" tabindex="-1"
-			aria-labelledby="staticBackdropLabel" aria-hidden="true">
-			<div class="modal-dialog modal-dialog-centered">
-				<div class="modal-content">
-					<div class="modal-header">
-						<h5 class="modal-title" id="staticBackdropLabel">SISTEMA</h5>
-						<button type="button" class="btn-close" data-bs-dismiss="modal"
-							aria-label="Close"></button>
-					</div>
-					<div class="modal-body">
-						<form id="formUsuario" action="ServletUsuario?accion=ELIMINAR"
-							method="post">
-							<h4>¿Seguro de eliminar el Usuario?</h4>
-							<input type="hidden" class="form-control" name="codigoEliminar"
-								id="codEliminar">
-							<div class="modal-footer">
-								<button type="submit" class="btn btn-primary">Eliminar</button>
-								<button type="button" class="btn btn-secondary"
-									data-bs-dismiss="modal">Cancelar</button>
-							</div>
-						</form>
-					</div>
-				</div>
-			</div>
-		</div>
-		<!--fin modal PARA ELIMINAR-->
-
 		<div class="mt-4">
-			<table id="tableUsuario" class="table table-striped table-bordered"
-				style="width: 100%">
+			<table id="tablePrestamista" class="table table-striped table-bordered"
+				style="width: 100%;text-align: center">
 				<thead>
 					<tr>
 						<th>CÓDIGO</th>
 						<th>NOMBRE</th>
 						<th>APELLIDO</th>
-						<th>EMAIL</th>
-						<th>CONTRASEÑA</th>
-						<th>TELEFONO</th>
-						<th>FECHA REGISTRO</th>
-						<th>ESTADO</th>
+						<th>DIRECCIÓN</th>
+						<th>CORREO</th>
+						<th>DNI</th>
+						<th>TELÉFONO</th>
 						<th></th>
 						<th></th>
 					</tr>
@@ -221,8 +184,6 @@
 				</tbody>
 			</table>
 		</div>
-
-
 
 
 	</div>
@@ -273,21 +234,17 @@
 		})
 
 		function cargarUsuario() {
-			$.get("ServletSUsuariossJSON",
+			$.get("ServletUsuarioJSON",
 				function(e) {
 				//console.log(e);
 					$.each(e,
 						function(i, item) {
 							$("#tableUsuario").append(
 									"<tr>"																			
-									+ "<td>"+ item.IdUsuario+ "</td>"
-									+ "<td>"+ item.nombre+ "</td>"
-									+ "<td>"+ item.apellido+ "</td>"
-									+ "<td>"+ item.email+ "</td>"
-									+ "<td>"+ item.contraseña+ "</td>"
-									+ "<td>"+ item.telefono+ "</td>"
-									+ "<td>"+ item.FechaRegistro+ "</td>"
-									+ "<td>"+ item.Estado+ "</td>"
+									+ "<td>"+ item.codigoUsuario+ "</td>"
+									+ "<td>"+ item.usuario+ "</td>"
+									+ "<td>"+ item.clave+ "</td>"
+									+ "<td>"+ item.tipoPersonal+ "</td>"
 									+ "<td><button type='button' class='btn btn-info btn-buscar' data-bs-toggle='modal' data-bs-target='#ModalUsuario'>BUSCAR</button></td>"
 									+ "<td><button type='button' class='btn btn-danger btn-eliminar' data-bs-toggle='modal' data-bs-target='#modalEliminar'>ELIMINAR</button></td>"
 									+ "</tr>");
@@ -322,79 +279,50 @@
 				})
 	</script>
 	
-	<script>
-		 $(document).ready(function(){     
-		        $('#frmUsuario').bootstrapValidator({      
-		        	 fields:{
-		        		 nombre:{
-		        			 validators:{
-		        				 notEmpty:{
-		        					 message:'Campo nombre es obligatorio'
-		        				 },
-		        						 regexp:{
-		 	        		 				regexp:/^[a-zA-Z\s\ñ\Ñ\á\é\í\ó\ú\Á\É\Í\Ó\Ú]{5,50}$/,
-		 	        		 				message:'Campo nombre solo letras MIN:5 MAX:50'
-		 	        		 			}
-		 	        		 		}
-		        		 },
-		        		 apellido:{
-		        			 validators:{
-		        				 notEmpty:{
-		        					 message:'Campo costo es obligatorio'
-		        				 },
-		        				 regexp:{
-		      		 				regexp:/^[a-zA-Z\s\ñ\Ñ\á\é\í\ó\ú\Á\É\Í\Ó\Ú]{5,50}$/,
-		      		 				message:'Campo nombre solo letras MIN:5 MAX:50'
-		      		 			}
-		        			 }
-		        		 },
-		        		 email:{
-		        			 validators:{
-		        				 notEmpty:{
-		        					 message:'Campo numero es obligatorio'
-		        				 },
-		        				 regexp:{
-		       		 				regexp:/[^@\t\r\n]+@gmail\.com/,
-		       		 				message:'Campo correo es @gmail.com'
-		       		 			}
-		        			 }
-		        		 },  
-		        		 contraseña:{
-		        			 validators:{
-		        				 notEmpty:{
-		        					 message:'Campo contraseña es obligatorio para registrarse'
-		        				 },
-		        				 regexp:{
-		       		 				regexp: /^(?=.*[A-Za-z])(?=.*\d)[A-Za-z\d]{8,}$/,
-		       		 				message:'La contraseña debe tener al menos 8 caracteres, incluyendo al menos una letra y un número'
-		       		 			}
-		        			 }
-		        		 },  
-		        		 telefono:{
-		        			 validators:{
-		        				 notEmpty:{
-		        					 message:'Campo contraseña es obligatorio para registrarse'
-		        				 },
-		        				 regexp:{
-		        					 regexp: /^[0-9]{9}$/,
-								message: 'Campo numero solo acepta numeros max de 9 digitos'
-		       		 			}
-		        			 }
-		        		 },  
-		        		 Estado: {
-								validators: {
-									notEmpty: {
-										message: 'Seleccione Estado'
-									}
-								}
-							},
-		        	 }
-		        });   
-					
-		    });    
+		<script>
+		$(document).ready(function () {
+		    //validación
+		    $('#frmUsuario').bootstrapValidator({      
+	        	 fields:{
+	        		 	usuario:{
+	        		 		validators:{
+	        		 			notEmpty:{
+	        		 				message:'Campo usuario es obligatorio'
+	        		 			},
+	        		 			regexp:{
+	        		 				regexp:/^[a-zA-Z\s\ñ\Ñ\á\é\í\ó\ú\Á\É\Í\Ó\Ú]{5,25}$/,
+	        		 				message:'Campo Usuario solo letras MIN:5 MAX:25'
+	        		 			}
+	        		 		}
+	        		 	},
+	        		 	clave:{
+	        		 		validators:{
+	        		 			notEmpty:{
+	        		 				message:'Campo clave es obligatorio'
+	        		 			},
+	        		 			regexp:{
+	        		 				regexp:/^{5,8}$/,
+	        		 				message:'Campo clave MIN:5 MAX:25'
+	        		 			}
+	        		 		}
+	        		 	},
+	        		 	codigoPersonal:{
+	        		 		validators:{
+	        		 			notEmpty:{
+	        		 				message:'Campo Tipo Empleado es obligatorio'
+	        		 			}
+	        		 		}
+	        		 	},
+	        	 }
+	        })
+	        
+		});
 	</script>
 </body>
 </html>
+
+
+
 
 
 

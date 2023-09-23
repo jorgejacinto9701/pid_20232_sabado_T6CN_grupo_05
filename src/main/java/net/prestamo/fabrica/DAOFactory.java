@@ -1,5 +1,6 @@
 package net.prestamo.fabrica;
 
+import net.prestamo.interfaces.PrestamistaDAO;
 import net.prestamo.interfaces.UsuariosDAO;
 
 
@@ -16,7 +17,8 @@ public abstract class DAOFactory {
     // registramos nuestros daos
 
     public abstract UsuariosDAO getUsuariosDAO();
-
+    public abstract PrestamistaDAO getPrestamistaDAO();
+    
    // public abstract ConAsistenciaDAO getConAsistenciaDAO();
     
     public static DAOFactory getDAOFactory(int whichFactory){
