@@ -27,7 +27,7 @@ public class ServletUsuarioss extends HttpServlet {
 
 	protected void service(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		
-		//recuperar p�rametro "accion" que viene de la p�gina docente.jsp para saber que acci�n se va a realizar
+		//recuperar p�rametro "accion" que viene de la p�gina usuario.jsp para saber que acci�n se va a realizar
 				String tipo;
 				tipo=request.getParameter("accion");
 				//evaluar el tipo de acci�n
